@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtBoxLength">350dp</dimen>
+    <dimen name="txtBoxWidth">50dp</dimen>
+    <dimen name="loginBtnLength">350dp</dimen>
+    <dimen name="loginBtnWidth">60dp</dimen>
+    <dimen name="mainTitleSize">60sp</dimen>
+    <dimen name="txtBoxTextSize">24sp</dimen>
+    <dimen name="txtBoxPadding">15dp</dimen>
+    <dimen name="titleTextSize">34sp</dimen>
+    <dimen name="txtSIze">20sp</dimen>
+    <dimen name="profiletxtBoxLength">220dp</dimen>
+    <dimen name="profiletxtBoxWidth">30dp</dimen>
+    <dimen name="profileBtnLength">370dp</dimen>
+    <dimen name="dashboardBtnLength1">150dp</dimen>
+    <dimen name="dashboardBtnLength2">311dp</dimen>
+    <dimen name="navbarLength">411dp</dimen>
+    <dimen name="navbarWidth">70dp</dimen>
+</resources>
