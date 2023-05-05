@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TravelSL</string>
+    <string name="w_medicine">Western Medicine</string>
+    <string name="a_medicine">Ayurvedic Medicine</string>
+    <string name="search_hint">Search For Keywords</string>
+    <string name="name">Name</string>
+    <string name="tel">Telephone : </string>
+    <string name="email">Email :</string>
+    <string name="med_center">Medical center</string>
+    <string name="spec">Specialization</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="submit">Submit Entry</string>
+    <string name="medType">Medicine Type</string>
+    <string name="u_range">Upper Range (Rs)</string>
+    <string name="l_range">Lower Range (Rs)</string>
+    <string name="email_example">abc@gmail.com</string>
+    <string name="tel_example">0123456789</string>
+    <string name="price_example">xxxxxx</string>
+
+
+    <string-array name="medicinetype">
+        <item>Western Medicine</item>
+        <item>Ayurveda Medicine</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

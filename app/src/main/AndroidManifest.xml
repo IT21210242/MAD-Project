@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TravelSL"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.ProcedureFetchWesternUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProcedureFetchAyurvedicUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DoctorFetchAyurvedicUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DoctorFetchWesternUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DoctorListItemUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProcedureListItemUserActivity"
+            android:exported="false" />
+        <!--        <activity-->
+        <!--            android:name=".activities.UserSelectMedActivity"-->
+        <!--            android:exported="false" />-->
+        <activity
+            android:name=".activities.AboutAyurvedicMedicine"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProcedureFetchAyurvedicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProcedureFetchWesternActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProcedureListItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProcedureInsertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ProcedureAdminInsertFetch"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DoctorFetchAyurvedicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DoctorListItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DoctorFetchWesternActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DoctorInsertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DoctorAdminInsertFetch"
+            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".AdminSelectMedActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".activities.AdminSelectMedActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

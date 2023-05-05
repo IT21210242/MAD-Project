@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "116814155708",
+    "project_id": "travelsl-3027a",
+    "storage_bucket": "travelsl-3027a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116814155708:android:03b9a1adb74b11517425b9",
+        "android_client_info": {
+          "package_name": "com.example.travelsl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116814155708-atuk41ufi574ufs8on6674ke414u22ik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmVSDB6jRZfwGqIDTVK3Nm9eJisZ4nrf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116814155708-atuk41ufi574ufs8on6674ke414u22ik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

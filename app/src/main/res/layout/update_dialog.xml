@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/etDocNameUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Doctor Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etDocMedCenterUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Doctor Medical Center" />
+
+    <EditText
+        android:id="@+id/etDocSpecUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Doctor Medical Specialisation"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/etDocTelUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Doctor Telephone"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/etDocEmailUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Doctor Email"
+        android:inputType="textPersonName" />
+    <Button
+        android:id="@+id/btnUpdateDataDialogBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Update Data" />
+
+</LinearLayout>
