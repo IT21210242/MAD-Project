@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="imageHeight">316dp</dimen>
+    <dimen name="HeadingTextSize">20dp</dimen>
+    <dimen name="accImageWidth">88dp</dimen>
+    <dimen name="accImageHeight">82dp</dimen>
+    <dimen name="postUploaderWidth">71dp</dimen>
+    <dimen name="postUploaderHeight">66dp</dimen>
+    <dimen name="locationLocatorWidth">35dp</dimen>
+    <dimen name="LocationLocatorHeight">41dp</dimen>
+    <dimen name="multilineTextHeight">150dp</dimen>
+    <dimen name="multilineTextTextSize">18sp</dimen>
+    <dimen name="scrollbarSize">4dp</dimen>
+    <dimen name="iconWidth">44dp</dimen>
+    <dimen name="iconHeight">36dp</dimen>
+    <dimen name="iconTextSize">25sp</dimen>
+    <dimen name="rateTextWidth">56dp</dimen>
+    <dimen name="rateTextHeight">36dp</dimen>
+    <dimen name="commentTextWidth">120dp</dimen>
+    <dimen name="commentTextHeight">36dp</dimen>
+    <dimen name="shareTextWidth">120dp</dimen>
+    <dimen name="commentTextheight">36dp</dimen>
+    <dimen name="moredotsWidth">50dp</dimen>
+    <dimen name="moredotsHeight">66dp</dimen>
+    <dimen name="yourPostsImageHeight">260dp</dimen>
+    <dimen name="oneHeadingSize">34sp</dimen>
+    <dimen name="button1Width">335dp</dimen>
+    <dimen name="button1Height">80dp</dimen>
+    <dimen name="insertTextViewSize">24sp</dimen>
+    <dimen name="createMultilineHeight">200dp</dimen>
+    <dimen name="checkBoxWidth">48dp</dimen>
+    <dimen name="checkBoxHeight">48dp</dimen>
+    <dimen name="insertLocationHeight">48dp</dimen>
+</resources>

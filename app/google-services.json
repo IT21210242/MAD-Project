@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "942758639320",
+    "project_id": "travelsl-keheliya",
+    "storage_bucket": "travelsl-keheliya.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942758639320:android:5114eab5a3752c1df909ad",
+        "android_client_info": {
+          "package_name": "com.example.travelslkeheliya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942758639320-vt2knmtr2uul6e6i986ooqjcvpe0hfpk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2r4KZLWvzlSSbQCfqi0ZXniFXkKR7Dsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942758639320-vt2knmtr2uul6e6i986ooqjcvpe0hfpk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
