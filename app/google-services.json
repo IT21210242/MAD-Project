@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "6646031806",
+    "project_id": "most-recommended-beaef",
+    "storage_bucket": "most-recommended-beaef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6646031806:android:520c7969ae4732fbeb05ef",
+        "android_client_info": {
+          "package_name": "com.example.mostrecommended"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6646031806-686vt9fr110p0dr5mlb8um6pgpb5v3ud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWCGVXlEmU4yVRHdgAT_l0Mwt7eEL4UEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6646031806-686vt9fr110p0dr5mlb8um6pgpb5v3ud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

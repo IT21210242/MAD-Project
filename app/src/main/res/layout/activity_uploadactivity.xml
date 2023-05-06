@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Uploadactivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1401dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="-780dp"
+            android:background="@drawable/purple_border"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+
+                android:id="@+id/eveLogo"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/upload_imgnew" />
+
+            <EditText
+
+                android:id="@+id/placeID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/purple_border"
+                android:gravity="start|center_vertical"
+                android:hint="Enter place ID :"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColor="@color/purple" />
+
+            <EditText
+
+                android:id="@+id/eveName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/purple_border"
+                android:gravity="start|center_vertical"
+                android:hint="Enter name of the place :"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColor="@color/purple" />
+
+            <EditText
+                android:id="@+id/eveDescription"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/purple_border"
+                android:gravity="start|center_vertical"
+                android:hint="Enter description :"
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColor="@color/purple" />
+
+            <EditText
+                android:id="@+id/evePriority"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/purple_border"
+                android:gravity="start|center_vertical"
+                android:hint="Enter district :"
+                android:padding="16dp"
+                android:textColor="@color/purple" />
+
+            <Button
+                android:id="@+id/addBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:text="Add"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</ScrollView>
