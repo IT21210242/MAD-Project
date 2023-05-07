@@ -1,5 +1,6 @@
 package com.example.travelsl2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -13,55 +14,24 @@ class UserMainHome : AppCompatActivity() {
         val btnSearch:ImageView = findViewById(R.id.btnsearch)
         val btnHealth: ImageView = findViewById(R.id.btnhealth)
         val btnDashboard:ImageView = findViewById(R.id.btndashboard)
-        val fragmentDashboard = DashboardFragment()
-        val fragmentTest = TestFragment()
+
 
         btnHome.setOnClickListener {
-            btnHome.setImageResource(R.drawable.selected_home)
-            btnSearch.setImageResource(R.drawable.unselected_search)
-            btnHealth.setImageResource(R.drawable.unselected_health)
-            btnDashboard.setImageResource(R.drawable.unselected_dashboard)
-
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView,fragmentTest)
-                commit()
-            }
+            val intent = Intent(applicationContext, UserMainHome::class.java)
+            startActivity(intent)
         }
 
         btnSearch.setOnClickListener {
-            btnHome.setImageResource(R.drawable.unselected_home)
-            btnSearch.setImageResource(R.drawable.selected_search)
-            btnHealth.setImageResource(R.drawable.unselected_health)
-            btnDashboard.setImageResource(R.drawable.unselected_dashboard)
 
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView,fragmentTest)
-                commit()
-            }
         }
 
         btnHealth.setOnClickListener {
-            btnHome.setImageResource(R.drawable.unselected_home)
-            btnSearch.setImageResource(R.drawable.unselected_search)
-            btnHealth.setImageResource(R.drawable.selected_health)
-            btnDashboard.setImageResource(R.drawable.unselected_dashboard)
 
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView,fragmentTest)
-                commit()
-            }
         }
 
         btnDashboard.setOnClickListener {
-            btnHome.setImageResource(R.drawable.unselected_home)
-            btnSearch.setImageResource(R.drawable.unselected_search)
-            btnHealth.setImageResource(R.drawable.unselected_health)
-            btnDashboard.setImageResource(R.drawable.selected_dashboard)
-
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView,fragmentDashboard)
-                commit()
-            }
+            val intent = Intent(applicationContext, Dashboard::class.java)
+            startActivity(intent)
         }
     }
 }

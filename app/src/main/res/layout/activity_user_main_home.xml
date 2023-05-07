@@ -62,15 +62,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.example.travelsl2.DashboardFragment"
-        android:layout_width="414dp"
-        android:layout_height="677dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnhome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_dashboard" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

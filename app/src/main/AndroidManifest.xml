@@ -15,6 +15,9 @@
             android:name=".TodoActivity"
             android:exported="false" />
         <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
             android:name=".UserMainHome"
             android:exported="false" />
         <activity
