@@ -6,15 +6,19 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+// DBHelper class to handle SQLite database operations
 class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) {
+    // Method to create database table
     override fun onCreate(p0: SQLiteDatabase?) {
         p0?.execSQL("create table Userdata (username TEXT primary key, password TEXT, name TEXT, email TEXT)")
     }
 
+    // Method to upgrade database table if necessary
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
        p0?.execSQL("drop table if exists Userdata")
     }
 
+    // Method to insert user data into database
     fun insertdata(username: String, password: String, name: String, email: String): Boolean {
         val p0 = this.writableDatabase
         val cv = ContentValues()
@@ -29,6 +33,7 @@ class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) 
         return true
     }
 
+    // Method to update user data in database
     fun updatedata(username: String, password: String, name: String, email: String): Boolean {
         val p0 = this.writableDatabase
         val cv = ContentValues()
@@ -40,12 +45,14 @@ class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) 
         return true
     }
 
+    // Method to delete user data from database
     fun deletedata(username: String): Boolean {
         val p0 = this.writableDatabase
         val result = p0.delete("Userdata", "username='$username'", null)
         return true
     }
 
+    // Method to check if username and password match in database
     fun checkuserpass(username: String, password: String): Boolean {
         val p0 = this.writableDatabase
         val query = "SELECT * FROM Userdata where username='$username' and password='$password'"
@@ -58,6 +65,7 @@ class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) 
         return true
     }
 
+    // Method to retrieve user details from database
     fun getUser(username: String): UserModel{
         val p0 = this.readableDatabase
         val cursorUser: Cursor = p0.rawQuery("SELECT * FROM Userdata where username='$username'", null)

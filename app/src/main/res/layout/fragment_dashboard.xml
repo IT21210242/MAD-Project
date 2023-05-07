@@ -20,6 +20,19 @@
         app:layout_constraintTop_toBottomOf="@+id/settings" />
 
     <Button
+        android:id="@+id/signoutbtn"
+        android:layout_width="@dimen/dashboardBtnLength2"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="Sign Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings" />
+
+    <Button
         android:id="@+id/settingsbtn"
         android:layout_width="@dimen/dashboardBtnLength1"
         android:layout_height="wrap_content"
