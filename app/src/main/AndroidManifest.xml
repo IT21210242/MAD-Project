@@ -68,6 +68,9 @@
         <!-- <activity -->
         <!-- android:name=".AdminSelectMedActivity" -->
         <!-- android:exported="false" /> -->
+<!--        <activity-->
+<!--            android:name=".activities.MainActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".activities.AdminSelectMedActivity"
             android:exported="true">
