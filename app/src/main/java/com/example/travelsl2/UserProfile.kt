@@ -73,7 +73,7 @@ class UserProfile : AppCompatActivity() {
         }
 
         btnHome.setOnClickListener {
-            val intent = Intent(applicationContext, UserMainHome::class.java)
+            val intent = Intent(applicationContext, Dashboard::class.java)
             startActivity(intent)
         }
     }

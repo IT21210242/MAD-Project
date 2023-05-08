@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.example.todoapp.database.repositories.TodoRepository
+import com.example.travelsl2.adapters.TodoAdapter
+import com.example.travelsl2.database.TodoDatabase
 
 // Defining the Dashboard activity class that extends the AppCompatActivity class
 class Dashboard : AppCompatActivity() {

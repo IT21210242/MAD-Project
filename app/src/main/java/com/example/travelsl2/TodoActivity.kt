@@ -2,11 +2,14 @@ package com.example.travelsl2
 
 
 import android.app.AlertDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelsl2.adapters.TodoAdapter
@@ -22,16 +25,42 @@ class TodoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_todo)
 
+        val btnHome: ImageView = findViewById(R.id.btnhome3)
+        val btnSearch: ImageView = findViewById(R.id.btnsearch3)
+        val btnHealth: ImageView = findViewById(R.id.btnhealth3)
+        val btnDashboard: ImageView = findViewById(R.id.btndashboard3)
+
+        btnHome.setOnClickListener {
+            val intent = Intent(applicationContext, UserMainHome::class.java)
+            startActivity(intent)
+
+        }
+
+        btnSearch.setOnClickListener {
+
+        }
+
+        btnHealth.setOnClickListener {
+
+        }
+
+        btnDashboard.setOnClickListener {
+            val intent = Intent(applicationContext, Dashboard::class.java)
+            startActivity(intent)
+        }
+
         val repository = TodoRepository(TodoDatabase.getInstance(this))
         val recyclerView: RecyclerView = findViewById(R.id.rvTodoList)
         val ui = this
+
         val adapter = TodoAdapter()
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(ui)
         CoroutineScope(Dispatchers.IO).launch {
             val data = repository.getAllTodos()
             adapter.setData(data, ui)
         }
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(ui)
+
 
         val btnAddTodo = findViewById<Button>(R.id.btnAddTodo)
         btnAddTodo.setOnClickListener {
@@ -60,8 +89,8 @@ class TodoActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 repository.insert(Todo(item))
                 val data = repository.getAllTodos()
-                runOnUiThread{
-                    adapter.setData(data,this@TodoActivity)
+                runOnUiThread {
+                    adapter.setData(data, this@TodoActivity)
                 }
             }
         }

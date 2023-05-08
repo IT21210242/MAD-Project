@@ -18,6 +18,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class TodoAdapter() : RecyclerView.Adapter<TodoAdapter.ViewHolder>() {
+
     lateinit var data: List<Todo>
     lateinit var context: Context
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
