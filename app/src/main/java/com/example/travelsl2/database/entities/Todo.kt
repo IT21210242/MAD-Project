@@ -5,8 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Todo(
-    var item: String?
+    var item: String? // the name of the todos item
 ) {
     @PrimaryKey(autoGenerate = true)
-    var id: Int? = null
+    var id: Int? = null // the unique ID of the todos item in the database
 }

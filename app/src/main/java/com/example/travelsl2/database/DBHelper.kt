@@ -1,10 +1,11 @@
-package com.example.travelsl2
+package com.example.travelsl2.database
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.travelsl2.database.entities.UserModel
 
 // DBHelper class to handle SQLite database operations
 class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) {
@@ -66,7 +67,7 @@ class DBHelper(context: Context):SQLiteOpenHelper(context, "Userdata", null, 1) 
     }
 
     // Method to retrieve user details from database
-    fun getUser(username: String): UserModel{
+    fun getUser(username: String): UserModel {
         val p0 = this.readableDatabase
         val cursorUser: Cursor = p0.rawQuery("SELECT * FROM Userdata where username='$username'", null)
         val userDetails: UserModel = UserModel()

@@ -1,16 +1,14 @@
 package com.example.travelsl2
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.ScrollCaptureSession
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.travelsl2.database.DBHelper
+import com.example.travelsl2.session.LoginPref
 
 // Define the main activity class
 class MainActivity : AppCompatActivity() {

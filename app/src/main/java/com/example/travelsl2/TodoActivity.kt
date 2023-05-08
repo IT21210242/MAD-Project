@@ -9,27 +9,32 @@ import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelsl2.adapters.TodoAdapter
 import com.example.travelsl2.database.TodoDatabase
 import com.example.travelsl2.database.entities.Todo
-import com.example.todoapp.database.repositories.TodoRepository
+import com.example.travelsl2.database.repositories.TodoRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+/*
+ This is the TodoActivity class that handles the display of a list of todos
+ and the addition of new todos to the list.
+ */
 class TodoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_todo)
 
+        // Get the views for the bottom navigation bar
         val btnHome: ImageView = findViewById(R.id.btnhome3)
         val btnSearch: ImageView = findViewById(R.id.btnsearch3)
         val btnHealth: ImageView = findViewById(R.id.btnhealth3)
         val btnDashboard: ImageView = findViewById(R.id.btndashboard3)
 
+        // Set click listeners for the bottom navigation bar buttons
         btnHome.setOnClickListener {
             val intent = Intent(applicationContext, UserMainHome::class.java)
             startActivity(intent)
@@ -49,11 +54,14 @@ class TodoActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Set up the RecyclerView and adapter for the list of todos
         val repository = TodoRepository(TodoDatabase.getInstance(this))
         val recyclerView: RecyclerView = findViewById(R.id.rvTodoList)
         val ui = this
 
         val adapter = TodoAdapter()
+
+        // Get all the todos from the database and set the data in the adapter
         CoroutineScope(Dispatchers.IO).launch {
             val data = repository.getAllTodos()
             adapter.setData(data, ui)
@@ -61,7 +69,7 @@ class TodoActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(ui)
 
-
+        // Set up the button to display the add todos dialog
         val btnAddTodo = findViewById<Button>(R.id.btnAddTodo)
         btnAddTodo.setOnClickListener {
             displayDialog(repository, adapter)
@@ -104,6 +112,4 @@ class TodoActivity : AppCompatActivity() {
         val alertDialog = builder.create()
         alertDialog.show()
     }
-
-
 }

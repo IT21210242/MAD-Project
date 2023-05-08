@@ -1,4 +1,4 @@
-package com.example.travelsl2
+package com.example.travelsl2.session
 
 import android.content.Context
 import android.content.SharedPreferences
