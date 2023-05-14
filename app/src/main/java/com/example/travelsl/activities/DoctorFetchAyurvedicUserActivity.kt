@@ -29,7 +29,6 @@ class DoctorFetchAyurvedicUserActivity : AppCompatActivity() {
     private lateinit var searchResultList: ArrayList<DoctorModel>
     private lateinit var tempResultList: ArrayList<DoctorModel>
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.doctor_activity_fetch_ayurvedic_user)
@@ -52,7 +51,6 @@ class DoctorFetchAyurvedicUserActivity : AppCompatActivity() {
             startActivity(intent)
         }
         getDoctorData()
-
     }
 
     private fun getDoctorData() {
@@ -92,7 +90,6 @@ class DoctorFetchAyurvedicUserActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
         })
 
     }
