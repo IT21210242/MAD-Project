@@ -6,7 +6,7 @@
     android:layout_margin="19dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="28dp"
-    tools:context=".activities.ProcedureListItemUserActivity">
+    tools:context=".activities_tharindu.ProcedureListItemUserActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
