@@ -11,9 +11,13 @@ import com.bumptech.glide.Glide
 
 //event myAdapter includes the activities related to event calendar
 
-class evemyAdapter(private val context: android.content.Context, private val dataList:List<eveDataClass>):RecyclerView.Adapter<eveMyViewHolder>() {
+class evemyAdapter(
+    private val context: android.content.Context,
+    private val dataList: List<eveDataClass>
+) : RecyclerView.Adapter<eveMyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): eveMyViewHolder {
-        val view2: View = LayoutInflater.from(parent.context).inflate(R.layout.everecycler_item,parent ,false)
+        val view2: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.everecycler_item, parent, false)
         return eveMyViewHolder(view2)
     }
 
@@ -30,14 +34,14 @@ class evemyAdapter(private val context: android.content.Context, private val dat
 
 }
 
-class eveMyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-    var recImageE : ImageView
-    var recTitleE : TextView
-    var recDescE : TextView
-    var recPriorityE : TextView
-    var recCardE : CardView
+class eveMyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    var recImageE: ImageView
+    var recTitleE: TextView
+    var recDescE: TextView
+    var recPriorityE: TextView
+    var recCardE: CardView
 
-    init{
+    init {
         recImageE = itemView.findViewById(R.id.recImageE)
         recTitleE = itemView.findViewById(R.id.recTitleE)
         recDescE = itemView.findViewById(R.id.recDescE)
