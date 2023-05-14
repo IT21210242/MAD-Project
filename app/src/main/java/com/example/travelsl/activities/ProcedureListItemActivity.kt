@@ -9,4 +9,5 @@ class ProcedureListItemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.procedure_activity_list_item)
     }
+
 }
