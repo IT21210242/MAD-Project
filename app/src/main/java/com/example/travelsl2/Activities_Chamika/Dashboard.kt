@@ -1,10 +1,11 @@
-package com.example.travelsl2
+package com.example.travelsl2.Activities_Chamika
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.example.travelsl2.R
 
 // Defining the Dashboard activity class that extends the AppCompatActivity class
 class Dashboard : AppCompatActivity() {
