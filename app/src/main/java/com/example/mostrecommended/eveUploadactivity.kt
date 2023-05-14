@@ -19,8 +19,8 @@ import java.util.Calendar
 class eveUploadactivity : AppCompatActivity() {
 
     private lateinit var binding: EveactivityUploadactivityBinding
-    var imageURL : String? = null
-    var uri:  Uri? = null
+    var imageURL: String? = null
+    var uri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,23 +28,25 @@ class eveUploadactivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val activityResultLauncher2 = registerForActivityResult<Intent, ActivityResult>(
-            ActivityResultContracts.StartActivityForResult()){result ->
-            if(result.resultCode == RESULT_OK){
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == RESULT_OK) {
                 val data = result.data
                 uri = data!!.data
                 binding.eveLogo.setImageURI(uri)
-            }else{
-                Toast.makeText(this@eveUploadactivity, "No image selected",Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this@eveUploadactivity, "No image selected", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 
-        binding.eveLogo.setOnClickListener{
+        binding.eveLogo.setOnClickListener {
             val photoPicker2 = Intent(Intent.ACTION_PICK)
             photoPicker2.type = "image/*"
             activityResultLauncher2.launch(photoPicker2)
         }
 
-        binding.addBtn.setOnClickListener{
+        binding.addBtn.setOnClickListener {
             saveData()
         }
 
@@ -70,22 +72,23 @@ class eveUploadactivity : AppCompatActivity() {
         }
     }
 
-    private fun uploadData(){
+    private fun uploadData() {
         val dataTitle = binding.eveName.text.toString()
         val dataDesc = binding.eveDescription.text.toString()
         val dataPriority = binding.evePriority.text.toString()
 
-        val dataClass = eveDataClass(dataTitle,dataDesc,dataPriority,imageURL)
+        val dataClass = eveDataClass(dataTitle, dataDesc, dataPriority, imageURL)
         val currentDate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().time)
 
         FirebaseDatabase.getInstance().getReference("eventCalendar").child(currentDate)
-            .setValue(dataClass).addOnCompleteListener{task->
-                if(task.isSuccessful){
+            .setValue(dataClass).addOnCompleteListener { task ->
+                if (task.isSuccessful) {
                     Toast.makeText(this@eveUploadactivity, "Saved", Toast.LENGTH_SHORT).show()
                     finish()
                 }
-            }.addOnFailureListener{e->
-                Toast.makeText(this@eveUploadactivity, e.message.toString(),Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener { e ->
+                Toast.makeText(this@eveUploadactivity, e.message.toString(), Toast.LENGTH_SHORT)
+                    .show()
             }
     }
 }
