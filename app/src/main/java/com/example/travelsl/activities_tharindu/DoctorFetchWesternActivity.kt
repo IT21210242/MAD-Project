@@ -1,25 +1,30 @@
-package com.example.travelsl.activities
+package com.example.travelsl.activities_tharindu
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.SearchView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelsl.R
 import com.example.travelsl.adapters.DocAdapter
 import com.example.travelsl.models.DoctorModel
 import com.google.firebase.database.*
+import java.util.*
 import kotlin.collections.ArrayList
 
-class DoctorFetchAyurvedicActivity : AppCompatActivity() {
+class DoctorFetchWesternActivity : AppCompatActivity() {
 
     private lateinit var docRecyclerView: RecyclerView
-    private lateinit var tvLoadingData: TextView
-    private lateinit var searchBarDoc: SearchView
+    private lateinit var tvLoadingData:TextView
+    private lateinit var searchBarDoc:SearchView
     private lateinit var buttonSet: LinearLayout
-    private lateinit var btnWeMedicine: Button
+    private lateinit var btnAvMedicine:Button
 
     private lateinit var dbRef: DatabaseReference
 
@@ -29,7 +34,7 @@ class DoctorFetchAyurvedicActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.doctor_activity_fetch_ayurvedic)
+        setContentView(R.layout.doctor_activity_fetch_western)
 
         docRecyclerView = findViewById(R.id.rvDoc)
         docRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -38,19 +43,21 @@ class DoctorFetchAyurvedicActivity : AppCompatActivity() {
         tvLoadingData = findViewById(R.id.tvLoadingData)
         searchBarDoc = findViewById(R.id.searchBarDoc)
         buttonSet = findViewById(R.id.buttonSet)
-        btnWeMedicine = findViewById(R.id.btnWeMedicine)
+        btnAvMedicine = findViewById(R.id.btnAvMedicine)
 
         docList = arrayListOf<DoctorModel>()
         searchResultList = arrayListOf<DoctorModel>()
         tempResultList = arrayListOf<DoctorModel>()
 
-        btnWeMedicine.setOnClickListener {
-            val intent = Intent(this, DoctorFetchWesternActivity::class.java)
+        btnAvMedicine.setOnClickListener {
+            val intent = Intent(this, DoctorFetchAyurvedicActivity::class.java)
             startActivity(intent)
         }
 
+
         getDoctorData()
         onCreateOptionsMenu()
+
     }
 
     private fun getDoctorData() {
@@ -61,9 +68,9 @@ class DoctorFetchAyurvedicActivity : AppCompatActivity() {
 
         dbRef = FirebaseDatabase.getInstance().getReference("Doctors")
 
-        val query = dbRef.orderByChild("doctorMedType").equalTo("Ayurveda Medicine")
+        val query = dbRef.orderByChild("doctorMedType").equalTo("Western Medicine")
 
-        query.addValueEventListener(object: ValueEventListener {
+        query.addValueEventListener(object:ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 docList.clear()
                 if (snapshot.exists()){
@@ -81,8 +88,8 @@ class DoctorFetchAyurvedicActivity : AppCompatActivity() {
                     buttonSet.visibility = View.VISIBLE
                 }
                 else{
-                    val intent = Intent(this@DoctorFetchAyurvedicActivity, DoctorAdminInsertFetch::class.java)
-                    startActivity(intent)
+                    val intent = Intent(this@DoctorFetchWesternActivity, DoctorAdminInsertFetch::class.java);
+                    startActivity(intent);
                 }
             }
 
@@ -106,12 +113,12 @@ class DoctorFetchAyurvedicActivity : AppCompatActivity() {
                 searchResultList.clear()
                 if(newText!=null){
                     for (i in docList){
-                        if (i.doctorName.toString().lowercase().contains(newText)){
+                        if (i.doctorName.toString().toLowerCase(Locale.ROOT).contains(newText)){
                             searchResultList.add(i)
                         }
                     }
                     if(searchResultList.isEmpty()){
-                        Toast.makeText(this@DoctorFetchAyurvedicActivity,"No Data found", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@DoctorFetchWesternActivity,"No Data found",Toast.LENGTH_SHORT).show()
                     }else{
                         docList.clear()
                         val adapter1 = DocAdapter(docList)
@@ -130,5 +137,8 @@ class DoctorFetchAyurvedicActivity : AppCompatActivity() {
 
         })
     }
+
+
+
 
 }

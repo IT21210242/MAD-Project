@@ -1,4 +1,4 @@
-package com.example.travelsl.activities
+package com.example.travelsl.activities_tharindu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
