@@ -74,6 +74,5 @@ class FetchAllPostsUser : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
-
     }
 }
