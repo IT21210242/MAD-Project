@@ -16,6 +16,7 @@ class DoctorListItemActivity : AppCompatActivity() {
     private lateinit var btnUpdateDocRecord:Button
     private lateinit var btnDeleteDocRecord:Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.doctor_activity_list_item)
