@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.travelsl.R
 
 class ProcedureListItemUserActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.procedure_activity_list_item_user)
