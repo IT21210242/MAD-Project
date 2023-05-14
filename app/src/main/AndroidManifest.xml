@@ -12,16 +12,16 @@
         android:theme="@style/Theme.TravelSL2"
         tools:targetApi="31">
         <activity
-            android:name=".TodoActivity"
+            android:name=".Activities_Chamika.TodoActivity"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".Activities_Chamika.Dashboard"
             android:exported="false" />
         <activity
-            android:name=".UserMainHome"
+            android:name=".Activities_Chamika.UserMainHome"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities_Chamika.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,10 +30,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Activities_Chamika.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".UserProfile"
+            android:name=".Activities_Chamika.UserProfile"
             android:exported="false" />
     </application>
 
