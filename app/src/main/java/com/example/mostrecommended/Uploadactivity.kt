@@ -22,8 +22,8 @@ class Uploadactivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUploadactivityBinding
 
-    var imageURL : String? = null
-    var uri:  Uri? = null
+    var imageURL: String? = null
+    var uri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,23 +31,24 @@ class Uploadactivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val activityResultLauncher = registerForActivityResult<Intent, ActivityResult>(
-            ActivityResultContracts.StartActivityForResult()){ result ->
-            if(result.resultCode == RESULT_OK){
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == RESULT_OK) {
                 val data = result.data
                 uri = data!!.data
                 binding.eveLogo.setImageURI(uri)
-            }else{
+            } else {
                 Toast.makeText(this@Uploadactivity, "No image selected", Toast.LENGTH_SHORT).show()
             }
         }
 
-        binding.eveLogo.setOnClickListener{
+        binding.eveLogo.setOnClickListener {
             val photoPicker = Intent(Intent.ACTION_PICK)
             photoPicker.type = "image/*"
             activityResultLauncher.launch(photoPicker)
         }
 
-        binding.addBtn.setOnClickListener{
+        binding.addBtn.setOnClickListener {
             saveData()
         }
 
@@ -73,23 +74,23 @@ class Uploadactivity : AppCompatActivity() {
         }
     }
 
-    private fun uploadData(){
+    private fun uploadData() {
         val dataID = binding.placeID.text.toString()
         val dataTitle = binding.eveName.text.toString()
         val dataDesc = binding.eveDescription.text.toString()
         val dataPriority = binding.evePriority.text.toString()
 
-        val dataClass = DataClass(dataID,dataTitle,dataDesc,dataPriority,imageURL)
+        val dataClass = DataClass(dataID, dataTitle, dataDesc, dataPriority, imageURL)
 
         val currentDate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().time)
 
         FirebaseDatabase.getInstance().getReference("Most Recommended").child(dataID)
-            .setValue(dataClass).addOnCompleteListener{task->
-                if(task.isSuccessful){
+            .setValue(dataClass).addOnCompleteListener { task ->
+                if (task.isSuccessful) {
                     Toast.makeText(this@Uploadactivity, "Saved", Toast.LENGTH_SHORT).show()
                     finish()
                 }
-            }.addOnFailureListener{e->
+            }.addOnFailureListener { e ->
                 Toast.makeText(this@Uploadactivity, e.message.toString(), Toast.LENGTH_SHORT).show()
             }
     }
