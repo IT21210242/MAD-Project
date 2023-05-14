@@ -67,17 +67,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-        binding.fab2.setOnClickListener{
+        binding.fab2.setOnClickListener {
             val intent2 = Intent(this@MainActivity, eveMainActivity::class.java)
             startActivity(intent2)
         }
 
-        binding.fab3.setOnClickListener{
+        binding.fab3.setOnClickListener {
             val intent3 = Intent(this@MainActivity, UpdateActivity::class.java)
             startActivity(intent3)
         }
 
-        binding.fab4.setOnClickListener{
+        binding.fab4.setOnClickListener {
             val intent4 = Intent(this@MainActivity, DeleteActivity::class.java)
             startActivity(intent4)
         }
