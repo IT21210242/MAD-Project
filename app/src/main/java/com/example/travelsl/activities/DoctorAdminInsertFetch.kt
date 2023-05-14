@@ -28,5 +28,4 @@ class DoctorAdminInsertFetch : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 }
