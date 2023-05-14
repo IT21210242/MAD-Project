@@ -75,5 +75,4 @@ class ProcedureInsertActivity : AppCompatActivity() {
             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
         }
     }
-
 }
