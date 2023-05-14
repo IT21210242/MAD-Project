@@ -12,11 +12,11 @@ import com.google.firebase.database.*
 
 class eveMainActivity : AppCompatActivity() {
 
-    private lateinit var binding : EveactivityMainBinding
-    private lateinit var dataList : ArrayList<eveDataClass>
+    private lateinit var binding: EveactivityMainBinding
+    private lateinit var dataList: ArrayList<eveDataClass>
     private lateinit var adapter: evemyAdapter
-    var databaseReference:DatabaseReference? = null
-    var eventListener:ValueEventListener? = null
+    var databaseReference: DatabaseReference? = null
+    var eventListener: ValueEventListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,9 +40,9 @@ class eveMainActivity : AppCompatActivity() {
         eventListener = databaseReference!!.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 dataList.clear()
-                for (itemSnapshot in snapshot.children){
+                for (itemSnapshot in snapshot.children) {
                     val dataClass2 = itemSnapshot.getValue(eveDataClass::class.java)
-                    if(dataClass2 != null){
+                    if (dataClass2 != null) {
                         dataList.add(dataClass2)
                     }
                 }
@@ -57,11 +57,10 @@ class eveMainActivity : AppCompatActivity() {
         })
 
         //link the add button with the eveUploadactivity page
-        binding.fab.setOnClickListener{
+        binding.fab.setOnClickListener {
             val intent = Intent(this, eveUploadactivity::class.java)
             startActivity(intent)
         }
-
 
 
     }
