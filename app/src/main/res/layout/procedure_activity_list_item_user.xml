@@ -1,0 +1,124 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="19dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="28dp"
+    tools:context=".activities_tharindu.ProcedureListItemUserActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="9dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="120dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvProNameItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:paddingStart="3dp"
+                android:text="Procedure Name"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="153dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/tvProMedCenterItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="3dp"
+                android:text="ProMedCenter"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="82dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/docTelephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="147dp">
+
+                <TextView
+                    android:id="@+id/tvProUpperRangeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:padding="10dp"
+                    android:text="@string/u_range"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="32dp"
+                    tools:layout_editor_absoluteY="147dp" />
+
+                <TextView
+                    android:id="@+id/tvProUpperRangeItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:padding="10dp"
+                    android:text="xxxxx"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="104dp"
+                    tools:layout_editor_absoluteY="147dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="48dp"
+                tools:layout_editor_absoluteY="184dp">
+
+                <TextView
+                    android:id="@+id/tvDocEmailLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/l_range"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="48dp"
+                    tools:layout_editor_absoluteY="184dp" />
+
+                <TextView
+                    android:id="@+id/tvProLowerRangeItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:padding="10dp"
+                    android:text="xxxxx"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="90dp"
+                    tools:layout_editor_absoluteY="184dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

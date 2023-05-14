@@ -14,7 +14,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/recImageE"
@@ -24,8 +24,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/upload_imgnew"
-            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+            android:src="@drawable/upload_imgnew" />
 
         <TextView
             android:id="@+id/recTitleE"
@@ -52,17 +51,20 @@
 
         <TextView
             android:id="@+id/recDescE"
-            android:layout_width="172dp"
-            android:layout_height="82dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/recTitleE"
             android:layout_marginStart="20dp"
             android:layout_marginTop="9dp"
             android:layout_marginBottom="12dp"
             android:layout_toEndOf="@id/recImageE"
-            android:maxLines="1"
+            android:maxLines="10"
             android:text="desc"
+            android:textAlignment="gravity"
             android:textColor="@color/purple"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/recImageE"
+            app:layout_constraintRight_toLeftOf="parent" />
 
 
     </RelativeLayout>

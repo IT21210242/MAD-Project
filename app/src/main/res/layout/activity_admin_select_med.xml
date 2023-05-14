@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities_tharindu.AdminSelectMedActivity">
+
+    <TextView
+        android:id="@+id/tvMedicalTourism"
+        android:layout_width="361dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Medical Tourism Admin Section"
+        android:textSize="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnProcedures"
+        android:layout_width="333dp"
+        android:layout_height="160dp"
+        android:background="@drawable/mybutton"
+        android:text="Procedures"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDoctors" />
+
+    <Button
+        android:id="@+id/btnDoctors"
+        android:layout_width="333dp"
+        android:layout_height="160dp"
+        android:background="@drawable/mybutton"
+        android:text="Doctors"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/btnProcedures"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMedicalTourism" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

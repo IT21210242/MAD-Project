@@ -7,6 +7,22 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colour1">#6004bb</color>
+    <color name="colour2">#2A6168</color>
+    <color name="delete">#D11A2A </color>
+    <color name="edit">#24a0ed</color>
+    <color name="search_bar">#F9F8F0</color>
+    <color name="button">#B1A9A9</color>
+
+    <color name="app_color">#6004BB</color>
+    <color name="app_color2">#2A6168</color>
+    <color name="button_white">#8BFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="navbar">#E2F1F0</color>
+
     <color name="purple">#6004BB</color>
     <color name="Green">#2A6168</color>
+
+    <color name="green">#2A6168</color> //10% color
 </resources>

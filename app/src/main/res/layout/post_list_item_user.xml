@@ -1,0 +1,121 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="28dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="19dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_margin="9dp"
+        >
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="120dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvProNameItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:text="User Name"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="153dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/tvPostLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Location"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="82dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="48dp"
+                tools:layout_editor_absoluteY="184dp">
+
+                <ImageView
+                    android:id="@+id/location1"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    app:srcCompat="@drawable/kandy" />
+
+                <TextView
+                    android:id="@+id/tvPostDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/dateofPost"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="48dp"
+                    tools:layout_editor_absoluteY="184dp" />
+
+                <TextView
+                    android:id="@+id/tvPostContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:text="@string/editTextMultilineKandy"
+                    tools:layout_editor_absoluteX="48dp"
+                    tools:layout_editor_absoluteY="184dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnUpdatePost"
+            android:layout_width="130dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/edit_button_shape"
+            android:drawableTop="@drawable/edit_record"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Button
+            android:id="@+id/btnDeletePost"
+            android:layout_width="130dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/delete_button_shape"
+            android:drawableTop="@drawable/delete_record"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
