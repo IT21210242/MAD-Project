@@ -22,6 +22,7 @@ class ProcedureAdminInsertFetch : AppCompatActivity() {
             val intent = Intent(this, ProcedureInsertActivity::class.java)
             startActivity(intent)
         }
+
         btnFetchProcedureData.setOnClickListener {
             val intent = Intent(this, ProcedureFetchWesternActivity::class.java)
             startActivity(intent)
