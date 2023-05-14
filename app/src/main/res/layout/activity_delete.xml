@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,34 +10,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="180dp">
+        android:layout_marginTop="180dp"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
             android:id="@+id/deleteID"
-            android:background="@drawable/purple_border"
-            android:padding="16dp"
-            android:hint="Enter place ID"
-            android:gravity="start|center_vertical"
-            android:textColor="@color/purple"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
-        
-        <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/purple_border"
+            android:gravity="start|center_vertical"
+            android:hint="Enter place ID"
+            android:padding="16dp"
+            android:textColor="@color/purple" />
+
+        <Button
             android:id="@+id/deleteBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:text="Delete"
             android:textSize="18sp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:cornerRadius = "20dp"/>
+            app:cornerRadius="20dp" />
 
 
     </LinearLayout>
