@@ -1,4 +1,4 @@
-package com.example.travelsl.activities
+package com.example.travelsl.activities_tharindu
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,11 +11,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelsl.R
-import com.example.travelsl.adapters.ProcedureUserAdapter
+import com.example.travelsl.adapters.ProcedureAdapter
 import com.example.travelsl.models.ProcedureModel
 import com.google.firebase.database.*
 
-class ProcedureFetchWesternUserActivity : AppCompatActivity() {
+class ProcedureFetchWesternActivity : AppCompatActivity() {
 
     private lateinit var proRecyclerView: RecyclerView
     private lateinit var tvLoadingData : TextView
@@ -29,7 +29,7 @@ class ProcedureFetchWesternUserActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.procedure_activity_fetch_western_user)
+        setContentView(R.layout.procedure_activity_fetch_western)
 
         proRecyclerView = findViewById(R.id.rvPro)
         proRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -43,9 +43,10 @@ class ProcedureFetchWesternUserActivity : AppCompatActivity() {
         proList = arrayListOf<ProcedureModel>()
 
         btnAvMedicine.setOnClickListener {
-            val intent = Intent(this, ProcedureFetchAyurvedicUserActivity::class.java)
+            val intent = Intent(this, ProcedureFetchAyurvedicActivity::class.java)
             startActivity(intent)
         }
+
         getProcedureData()
     }
 
@@ -66,7 +67,7 @@ class ProcedureFetchWesternUserActivity : AppCompatActivity() {
                         val proData = docSnap.getValue(ProcedureModel::class.java)
                         proList.add(proData!!)
                     }
-                    val mAdapter = ProcedureUserAdapter(proList)
+                    val mAdapter = ProcedureAdapter(proList)
                     proRecyclerView.adapter=mAdapter
 
                     proRecyclerView.visibility = View.VISIBLE
@@ -75,7 +76,7 @@ class ProcedureFetchWesternUserActivity : AppCompatActivity() {
                     buttonSet.visibility = View.VISIBLE
                 }
                 else{
-                    val intent = Intent(this@ProcedureFetchWesternUserActivity, UserSelectMedActivity::class.java);
+                    val intent = Intent(this@ProcedureFetchWesternActivity, ProcedureInsertActivity::class.java);
                     startActivity(intent);
                 }
             }
@@ -85,5 +86,6 @@ class ProcedureFetchWesternUserActivity : AppCompatActivity() {
             }
 
         })
+
     }
 }

@@ -1,4 +1,4 @@
-package com.example.travelsl.activities
+package com.example.travelsl.activities_tharindu
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,19 +11,17 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelsl.R
-import com.example.travelsl.adapters.DocAdapter
-import com.example.travelsl.adapters.ProcedureAdapter
-import com.example.travelsl.models.DoctorModel
+import com.example.travelsl.adapters.ProcedureUserAdapter
 import com.example.travelsl.models.ProcedureModel
 import com.google.firebase.database.*
 
-class ProcedureFetchWesternActivity : AppCompatActivity() {
+class ProcedureFetchAyurvedicUserActivity : AppCompatActivity() {
 
     private lateinit var proRecyclerView: RecyclerView
     private lateinit var tvLoadingData : TextView
     private lateinit var searchBarPro: SearchView
     private lateinit var buttonSet: LinearLayout
-    private lateinit var btnAvMedicine: Button
+    private lateinit var btnWeMedicine: Button
 
     private lateinit var dbRef: DatabaseReference
 
@@ -31,7 +29,7 @@ class ProcedureFetchWesternActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.procedure_activity_fetch_western)
+        setContentView(R.layout.procedure_activity_fetch_ayurvedic_user)
 
         proRecyclerView = findViewById(R.id.rvPro)
         proRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -40,15 +38,14 @@ class ProcedureFetchWesternActivity : AppCompatActivity() {
         tvLoadingData = findViewById(R.id.tvLoadingData)
         searchBarPro = findViewById(R.id.searchBarPro)
         buttonSet = findViewById(R.id.buttonSet)
-        btnAvMedicine = findViewById(R.id.btnAvMedicine)
+        btnWeMedicine = findViewById(R.id.btnWeMedicine)
 
         proList = arrayListOf<ProcedureModel>()
 
-        btnAvMedicine.setOnClickListener {
-            val intent = Intent(this, ProcedureFetchAyurvedicActivity::class.java)
+        btnWeMedicine.setOnClickListener {
+            val intent = Intent(this, ProcedureFetchWesternUserActivity::class.java)
             startActivity(intent)
         }
-
         getProcedureData()
     }
 
@@ -60,7 +57,7 @@ class ProcedureFetchWesternActivity : AppCompatActivity() {
 
         dbRef = FirebaseDatabase.getInstance().getReference("Procedures")
 
-        val query = dbRef.orderByChild("procedureMedType").equalTo("Western Medicine")
+        val query = dbRef.orderByChild("procedureMedType").equalTo("Ayurveda Medicine")
         query.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 proList.clear()
@@ -69,7 +66,7 @@ class ProcedureFetchWesternActivity : AppCompatActivity() {
                         val proData = docSnap.getValue(ProcedureModel::class.java)
                         proList.add(proData!!)
                     }
-                    val mAdapter = ProcedureAdapter(proList)
+                    val mAdapter = ProcedureUserAdapter(proList)
                     proRecyclerView.adapter=mAdapter
 
                     proRecyclerView.visibility = View.VISIBLE
@@ -78,7 +75,7 @@ class ProcedureFetchWesternActivity : AppCompatActivity() {
                     buttonSet.visibility = View.VISIBLE
                 }
                 else{
-                    val intent = Intent(this@ProcedureFetchWesternActivity, ProcedureInsertActivity::class.java);
+                    val intent = Intent(this@ProcedureFetchAyurvedicUserActivity, UserSelectMedActivity::class.java);
                     startActivity(intent);
                 }
             }
@@ -88,6 +85,5 @@ class ProcedureFetchWesternActivity : AppCompatActivity() {
             }
 
         })
-
     }
 }
