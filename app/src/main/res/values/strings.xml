@@ -25,4 +25,65 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Title">Sri Lanka Tours</string>
+    <string name="btnLogin">Login</string>
+    <string name="aboutus">About Us</string>
+    <string name="contactus">Contact Us</string>
+    <string name="term">Terms and Conditions</string>
+    <string name="follow">Follow us on</string>
+    <string name="signup">Signup</string>
+    <string name="forgotpwd">Forgot Password</string>
+    <string name="help">Need Help\?</string>
+    <string name="btnregister">Register</string>
+    <string name="login">Login</string>
+    <string name="userprofile">User Profile</string>
+    <string name="upname">Name\:</string>
+    <string name="upemail">Email\:</string>
+    <string name="upusername">Username\:</string>
+    <string name="update">Update</string>
+    <string name="deleteAcc">Deactivate Profile</string>
+    <string name="settings">Settings</string>
+    <string name="profile">User Profile</string>
+    <string name="visited">Places you have currently visited</string>
+    <string name="trip">Your Galle Trip</string>
+    <string name="add">Add</string>
+    <string name="adminlogin">Admin Login</string>
+    <string name="todo">To-Do List</string>
+    <string name="adminprofile">Admin Profile</string>
+    <string name="newadmin">New Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="planner">Planner</string>
+
+    <string name="user1">Keheliya Vimukthi</string>
+    <string name="locationName">Galle</string>
+    <string name="multilineText">Galle is a beautiful city with rich history and stunning architcture. The highlight of my visit was exploring the Galle Fort. The fort is well-preserved and offers stunning views of the ocean. I alse enjoyed wandering through the narrow streets and discovering charming cafes and boutiquesGalle is a beautiful city with rich history and stunning architcture. The highlight of my visit was exploring the Galle Fort. The fort is well-preserved and offers stunning views of the ocean. I alse enjoyed wandering through the narrow streets and discovering charming cafes and boutiquesGalle is a beautiful city with rich history and stunning architcture. The highlight of my visit was exploring the Galle Fort. The fort is well-preserved and offers stunning views of the ocean. I alse enjoyed wandering through the narrow streets and discovering charming cafes and boutiques</string>
+    <string name="rate">Rate</string>
+    <string name="Comment">Comment</string>
+    <string name="Share">Share</string>
+    <string name="uploader1">Tharindu De Costa</string>
+    <string name="locationName2">Kandy</string>
+    <string name="multilineTextKandy">Kandy, the cultural capital of Sri Lanka, a World Heritage Site sits pretty in a valley surrounded by rings of mountains, 115km away from the seaport of Colombo. Right in the heart of the city center of Kandy is the man-made lake called Kiri Muhuda (Sinhala: the sea of milk), the one and only decorative lake in Sri Lanka. All other thousands of man-made reservoirs in Sri Lanka are developed primarily for the purposes of irrigation, and secondarily for the purposes of general use and wildlife conservation.</string>
+    <string name="CreateNew">Create Post</string>
+    <string name="insertLocation">Location</string>
+    <string name="insertLocationPlain">Insert Location</string>
+    <string name="metaImage">Meta Image</string>
+    <string name="choseImage">Choose File</string>
+    <string name="noFileChosen">No file chosen</string>
+    <string name="PostContent">Post Content</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="editTextTextMultiLine">Post Article</string>
+    <string name="editpost">Edit Post</string>
+    <string name="insertLocationPlainKandy">Kandy</string>
+    <string name="editTextMultilineKandy">Kandy, the cultural capital of Sri Lanka, a World Heritage Site sits pretty in a valley surrounded by rings of mountains, 115km away from the seaport of Colombo. Right in the heart of the city center of Kandy is the man-made lake called Kiri Muhuda (Sinhala: the sea of milk), the one and only decorative lake in Sri Lanka. All other thousands of man-made reservoirs in Sri Lanka are developed primarily for the purposes of irrigation, and secondarily for the purposes of general use and wildlife conservation.</string>
+    <string name="choseImageKandy">Kandy.png</string>
+    <string name="filechosen">File has chosen</string>
+    <string name="btnEdit">Edit</string>
+    <string name="btnDelete">Delete</string>
+    <string name="communityPost">Community Posts</string>
+    <string name="btnWhatsNew">What\'s New</string>
+    <string name="btnYourPosts">Your Posts</string>
+    <string name="btnCreate">Create a New Post</string>
+    <string name="dateofPost">22 March 2023</string>
 </resources>
