@@ -34,7 +34,6 @@ class FetchAllPostsUser : AppCompatActivity() {
         buttonSet = findViewById(R.id.buttonSet)
 
         postList = arrayListOf<PostModel>()
-
         btnAllPosts = findViewById(R.id.btnAllPosts)
 
         btnAllPosts.setOnClickListener {
