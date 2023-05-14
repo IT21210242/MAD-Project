@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var btnClick: Button
     private lateinit var message: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         btnClick = findViewById(R.id.btnClick)
         message = findViewById(R.id.tvMessage)
         message.text = "Hello, User!"
-
     }
 
 }

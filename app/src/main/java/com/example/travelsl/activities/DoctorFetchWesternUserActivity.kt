@@ -50,11 +50,8 @@ class DoctorFetchWesternUserActivity : AppCompatActivity() {
             val intent = Intent(this, DoctorFetchAyurvedicUserActivity::class.java)
             startActivity(intent)
         }
-
-
         getDoctorData()
         onCreateOptionsMenu()
-
     }
 
     private fun getDoctorData() {
@@ -95,13 +92,10 @@ class DoctorFetchWesternUserActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
         })
-
     }
 
     private fun onCreateOptionsMenu() {
-
 
         searchBarDoc.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
