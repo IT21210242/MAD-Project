@@ -20,25 +20,34 @@ class UpdateActivity : AppCompatActivity() {
         binding = ActivityUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.updateBtn.setOnClickListener{
+        binding.updateBtn.setOnClickListener {
             val placeID = binding.placeID.text.toString()
             val placeName = binding.placeName.text.toString()
             val districtUpdate = binding.districtUpdate.text.toString()
             val descUpdate = binding.descUpdate.text.toString()
 
-            updateData(placeID,placeName,districtUpdate,descUpdate)
+            updateData(placeID, placeName, districtUpdate, descUpdate)
         }
     }
 
-    private fun updateData(placeID:String,dataTitle: String, dataPriority: String, dataDesc:String){
+    private fun updateData(
+        placeID: String,
+        dataTitle: String,
+        dataPriority: String,
+        dataDesc: String
+    ) {
         databaseReference = FirebaseDatabase.getInstance().getReference("Most Recommended")
-        val user = mapOf<String, String>("dataTitle" to dataTitle,"dataPriority" to dataPriority, "dataDesc" to dataDesc)
+        val user = mapOf<String, String>(
+            "dataTitle" to dataTitle,
+            "dataPriority" to dataPriority,
+            "dataDesc" to dataDesc
+        )
         databaseReference.child(placeID).updateChildren(user).addOnSuccessListener {
             binding.placeName.text.clear()
             binding.districtUpdate.text.clear()
             binding.descUpdate.text.clear()
             Toast.makeText(this, "Updated", Toast.LENGTH_SHORT).show()
-        }.addOnFailureListener{
+        }.addOnFailureListener {
             Toast.makeText(this, "Unable to Update", Toast.LENGTH_SHORT).show()
         }
     }
