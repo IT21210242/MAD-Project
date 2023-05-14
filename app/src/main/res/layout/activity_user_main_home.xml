@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities_chamika.UserMainHome">
+
+    <ImageView
+        android:id="@+id/accImage2"
+        android:layout_width="@dimen/accImageWidth"
+        android:layout_height="@dimen/accImageHeight"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar1" />
+
+    <TextView
+        android:id="@+id/communityPost2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="89dp"
+        android:text="@string/communityPost"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/oneHeadingSize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnWhatsNew"
+        app:layout_constraintEnd_toStartOf="@+id/accImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnWhatsNew2"
+        android:layout_width="@dimen/button1Width"
+        android:layout_height="@dimen/button1Height"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="59dp"
+        android:text="@string/btnWhatsNew"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnYourPosts2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/communityPost2" />
+
+    <Button
+        android:id="@+id/btnYourPosts2"
+        android:layout_width="@dimen/button1Width"
+        android:layout_height="@dimen/button1Height"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/btnYourPosts"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnWhatsNew2" />
+
+    <Button
+        android:id="@+id/btnCreateNewPost2"
+        android:layout_width="@dimen/button1Width"
+        android:layout_height="@dimen/button1Height"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="120dp"
+        android:text="@string/btnCreate"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnYourPosts2" />
+
+    <ImageView
+        android:id="@+id/btnhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnsearch"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/selected_home" />
+
+    <ImageView
+        android:id="@+id/btnsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnhealth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnhome"
+        app:srcCompat="@drawable/unselected_search" />
+
+    <ImageView
+        android:id="@+id/btnhealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btndashboard"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnsearch"
+        app:srcCompat="@drawable/unselected_health" />
+
+    <ImageView
+        android:id="@+id/btndashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnhealth"
+        app:srcCompat="@drawable/unselected_dashboard" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/btnhome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
