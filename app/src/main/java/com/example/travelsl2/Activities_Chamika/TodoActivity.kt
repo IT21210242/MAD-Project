@@ -1,4 +1,4 @@
-package com.example.travelsl2
+package com.example.travelsl2.Activities_Chamika
 
 
 import android.app.AlertDialog
@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.travelsl2.R
 import com.example.travelsl2.adapters.TodoAdapter
 import com.example.travelsl2.database.TodoDatabase
 import com.example.travelsl2.database.entities.Todo
