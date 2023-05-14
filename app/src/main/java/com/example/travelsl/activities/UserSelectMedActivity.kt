@@ -35,6 +35,4 @@ class UserSelectMedActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
 }
