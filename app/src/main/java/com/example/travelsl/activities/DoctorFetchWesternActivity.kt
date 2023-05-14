@@ -56,9 +56,7 @@ class DoctorFetchWesternActivity : AppCompatActivity() {
 
         getDoctorData()
         onCreateOptionsMenu()
-
     }
-
     private fun getDoctorData() {
         docRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
