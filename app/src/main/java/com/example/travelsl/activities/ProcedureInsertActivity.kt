@@ -65,6 +65,7 @@ class ProcedureInsertActivity : AppCompatActivity() {
         val procedureDb = ProcedureModel(procedureId,
             procedureName,procedureMedCenter,procedureMedType,procedureUpperPrice,procedureLowerPrice)
 
+
         dbRef.child(procedureId).setValue(procedureDb).addOnCompleteListener{
             Toast.makeText(this,"Data Inserted successfully", Toast.LENGTH_LONG).show()
             etProcedureName.text.clear()
