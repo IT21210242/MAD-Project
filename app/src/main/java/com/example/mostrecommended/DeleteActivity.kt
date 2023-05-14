@@ -19,23 +19,23 @@ class DeleteActivity : AppCompatActivity() {
         binding = ActivityDeleteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.deleteBtn.setOnClickListener{
+        binding.deleteBtn.setOnClickListener {
             val deleteID = binding.deleteID.text.toString()
-            if(deleteID.isNotEmpty()){
+            if (deleteID.isNotEmpty()) {
                 deleteData(deleteID)
-            }else{
-                Toast.makeText(this,"Please enter place ID",Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Please enter place ID", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun deleteData(deleteID : String){
+    private fun deleteData(deleteID: String) {
         databaseReference = FirebaseDatabase.getInstance().getReference("Most Recommended")
         databaseReference.child(deleteID).removeValue().addOnSuccessListener {
             binding.deleteID.text.clear()
             Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show()
 
-        }.addOnFailureListener{
+        }.addOnFailureListener {
             Toast.makeText(this, "Unable to delete", Toast.LENGTH_SHORT).show()
         }
     }
