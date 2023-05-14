@@ -81,5 +81,6 @@ class  DoctorInsertActivity : AppCompatActivity() {
         }.addOnFailureListener{ err->
             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
         }
+
     }
 }
