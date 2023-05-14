@@ -1,4 +1,4 @@
-package com.example.travelsl2
+package com.example.travelsl2.Activities_Chamika
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.example.travelsl2.R
 import com.example.travelsl2.database.DBHelper
 import com.example.travelsl2.database.entities.UserModel
 import com.example.travelsl2.session.LoginPref
