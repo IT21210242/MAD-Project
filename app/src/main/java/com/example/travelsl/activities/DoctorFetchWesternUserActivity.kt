@@ -101,6 +101,7 @@ class DoctorFetchWesternUserActivity : AppCompatActivity() {
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 return false
             }
+
             override fun onQueryTextChange(newText: String?): Boolean {
                 searchResultList.clear()
                 if (newText != null) {
