@@ -41,7 +41,6 @@ class PostUserAdapter(private var PostList:ArrayList<PostModel>): RecyclerView.A
                 .create()
             alertDialog.show()
         }
-
     }
 
     override fun getItemCount(): Int {
