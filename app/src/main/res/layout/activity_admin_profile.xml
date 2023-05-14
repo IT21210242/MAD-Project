@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities_chamika.UserProfile">
+
+    <TextView
+        android:id="@+id/uppwd2"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="272dp"
+        android:text="Password:"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/txtSIze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/updatepwdtxt2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/updatepwdtxt2"
+        android:layout_width="@dimen/profiletxtBoxLength"
+        android:layout_height="@dimen/profiletxtBoxWidth"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="125dp"
+        android:background="@drawable/boxborder2"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingRight="10dp"
+        android:text="*******"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txtSIze"
+        app:layout_constraintBottom_toTopOf="@+id/updateprofile"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/userprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="612dp"
+        android:text="Admin Profile"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/titleTextSize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="149dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="460dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userprofile"
+        tools:srcCompat="@drawable/persona" />
+
+    <TextView
+        android:id="@+id/upname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="296dp"
+        android:layout_marginBottom="410dp"
+        android:text="@string/upname"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/txtSIze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/upemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="365dp"
+        android:text="@string/upemail"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/txtSIze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/upusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="320dp"
+        android:text="@string/upusername"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/txtSIze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/updateprofile"
+        android:layout_width="@dimen/profileBtnLength"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/app_color"
+        android:padding="5dp"
+        android:text="@string/update"
+        android:textSize="@dimen/txtBoxTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="@dimen/profileBtnLength"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:padding="5dp"
+        android:text="@string/delete"
+        android:textSize="@dimen/txtBoxTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/updatename"
+        android:layout_width="@dimen/profiletxtBoxLength"
+        android:layout_height="@dimen/profiletxtBoxWidth"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="410dp"
+        android:background="@drawable/boxborder2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingRight="10dp"
+        android:text="Harry Grace"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txtSIze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/updateEmail"
+        android:layout_width="@dimen/profiletxtBoxLength"
+        android:layout_height="@dimen/profiletxtBoxWidth"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="365dp"
+        android:background="@drawable/boxborder2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingRight="10dp"
+        android:text="hgrace@gmail.com"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txtSIze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/updateuname"
+        android:layout_width="@dimen/profiletxtBoxLength"
+        android:layout_height="@dimen/profiletxtBoxWidth"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="320dp"
+        android:background="@drawable/boxborder2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingRight="10dp"
+        android:text="H_Grace95"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txtSIze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/backbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="347dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="227dp"
+        app:layout_constraintBottom_toTopOf="@+id/updatename"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_exit_to_app_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
