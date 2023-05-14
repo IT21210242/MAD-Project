@@ -10,4 +10,5 @@ class ProcedureListItemActivity : AppCompatActivity() {
         setContentView(R.layout.procedure_activity_list_item)
     }
 
+
 }
