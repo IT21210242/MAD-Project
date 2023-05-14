@@ -50,6 +50,7 @@ class ProcedureFetchAyurvedicActivity : AppCompatActivity() {
         getProcedureData()
     }
 
+
     private fun getProcedureData() {
         proRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
