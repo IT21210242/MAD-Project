@@ -54,7 +54,6 @@ class DoctorFetchWesternActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         getDoctorData()
         onCreateOptionsMenu()
 
