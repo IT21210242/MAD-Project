@@ -70,7 +70,6 @@ class FetchAllPostsUser : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
