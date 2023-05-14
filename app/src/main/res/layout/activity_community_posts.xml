@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CommunityPosts">
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/btnhome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/accImage"
+        android:layout_width="@dimen/accImageWidth"
+        android:layout_height="@dimen/accImageHeight"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar1" />
+
+    <TextView
+        android:id="@+id/communityPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="89dp"
+        android:text="@string/communityPost"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/oneHeadingSize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnWhatsNew"
+        app:layout_constraintEnd_toStartOf="@+id/accImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnWhatsNew"
+        android:layout_width="@dimen/button1Width"
+        android:layout_height="@dimen/button1Height"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="37dp"
+        android:textSize="25dp"
+        android:text="@string/btnWhatsNew"
+        app:layout_constraintBottom_toTopOf="@+id/btnYourPosts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accImage" />
+
+    <Button
+        android:id="@+id/btnYourPosts"
+        android:layout_width="@dimen/button1Width"
+        android:layout_height="@dimen/button1Height"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="37dp"
+        android:text="@string/btnYourPosts"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreateNewPost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnWhatsNew" />
+
+    <Button
+        android:id="@+id/btnCreateNewPost"
+        android:layout_width="@dimen/button1Width"
+        android:layout_height="@dimen/button1Height"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="25dp"
+        android:text="@string/btnCreate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnYourPosts" />
+</androidx.constraintlayout.widget.ConstraintLayout>

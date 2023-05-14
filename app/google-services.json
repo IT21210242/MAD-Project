@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "116814155708",
+    "firebase_url": "https://travelsl-3027a-default-rtdb.firebaseio.com",
     "project_id": "travelsl-3027a",
     "storage_bucket": "travelsl-3027a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:116814155708:android:03b9a1adb74b11517425b9",
+        "mobilesdk_app_id": "1:116814155708:android:32902eaad5a8aaae7425b9",
         "android_client_info": {
           "package_name": "com.example.travelsl"
         }
