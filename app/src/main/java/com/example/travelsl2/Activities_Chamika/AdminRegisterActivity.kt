@@ -1,4 +1,4 @@
-package com.example.travelsl2
+package com.example.travelsl2.Activities_Chamika
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.travelsl2.R
 import com.example.travelsl2.database.DBHelperAdmin
 
 class AdminRegisterActivity : AppCompatActivity() {
