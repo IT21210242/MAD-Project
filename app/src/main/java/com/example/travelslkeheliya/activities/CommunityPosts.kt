@@ -22,7 +22,6 @@ class CommunityPosts : AppCompatActivity() {
             val intent = Intent(this, CreateNewPostForm::class.java)
             startActivity(intent)
         }
-
         btnWhatsNew.setOnClickListener {
             val intent = Intent(this, FetchAllPosts::class.java)
             startActivity(intent)
